@@ -1,13 +1,18 @@
 {
   "name": "start-bunfire",
   "module": "index.ts",
+  "version": "0.0.4",
   "description": "CLI to bootstrap a new Bunfire project.",
   "type": "module",
   "bin": {
-    "start-bunfire": "dist/cli.js"
+    "start-bunfire": "./dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "bun build --target=bun src/cli.ts --outdir dist"
+    "build": "bun build --target=bun src/cli.ts --outdir dist",
+    "prepublish": "bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -16,5 +21,26 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "author": "Your Name freilyn@bernabe.dev"
+  "author": "Your Name freilyn@bernabe.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bernabedev/start-bunfire.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  },
+  "keywords": [
+    "bunfire",
+    "cli",
+    "starter"
+  ],
+  "homepage": "https://github.com/bernabedev/start-bunfire"
 }

@@ -1,0 +1,20 @@
+{
+  "name": "start-bunfire",
+  "module": "index.ts",
+  "description": "CLI to bootstrap a new Bunfire project.",
+  "type": "module",
+  "bin": {
+    "start-bunfire": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "bun build --target=bun src/cli.ts --outdir dist"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/fs-extra": "^11.0.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "author": "Your Name freilyn@bernabe.dev"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "bunfire-app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bunfire dev",
+    "build": "bunfire build",
+    "start": "bunfire start"
+  },
+  "dependencies": {
+    "bunfire": "^0.0.2"
+  }
+}
